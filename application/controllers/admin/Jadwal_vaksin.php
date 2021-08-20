@@ -56,7 +56,7 @@ class Jadwal_vaksin extends CI_Controller {
 	public function delete(){
 		$id = $this->input->get('id');
 		$this->db->where('id_jadwal', $id);
-		$this->db->delete('jadwaal');
+		$this->db->delete('jadwal');
 		$this->index();
 	}
 }

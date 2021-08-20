@@ -48,7 +48,7 @@
                       <?php foreach ($result as $r) { ?>
                         <tr>
                           <td class="td-its align-middle border-bottom"><?php echo $r->nama_vaksin ?></td>
-                          <td class="td-its align-middle border-bottom"><a href="#" class="btn btn-white btn-icon" role="button" data-toggle="modal" data-target="#hapusjenisvaksin" data-animation="effect-scale"><i data-feather="trash" class="wd-10"></i></a></td>
+                          <td class="td-its align-middle border-bottom"><a href="#" class="btn btn-white btn-icon btn-delete" role="button" data-toggle="modal" data-target="#hapusjenisvaksin" data-animation="effect-scale" data-id="<?php echo $r->id_vaksin ?>"><i data-feather="trash" class="wd-10"></i></a></td>
                         </tr>
                       <?php } ?>
                       
@@ -72,11 +72,11 @@
             </button>
             <h5 class="tx-montserrat tx-medium" id="tambahjenisvaksinLabel">Tambah Jenis Vaksin</h5>
           </div>
-          <form>
+          <form method="post" action="<?php echo base_url();?>admin/jenis_vaksin/add/">
             <div class="modal-body pd-t-0">
               <div class="form-group">
                 <label class="d-block tx-10 tx-spacing-1 tx-color-03 tx-uppercase tx-semibold">Nama</label>
-                <input type="text" id="nama" name="nama" class="form-control" required>
+                <input type="text" id="nama_vac" name="nama_vac" class="form-control" required>
               </div>
             </div>
             <div class="modal-footer">
@@ -98,7 +98,8 @@
           <div class="modal-footer bd-t-0">
             <form>
               <a href="#" data-toggle="modal" data-animation="effect-scale" class="btn btn-white tx-montserrat tx-semibold" data-dismiss="modal">Batalkan</a>
-              <button type="submit" class="btn btn-its tx-montserrat tx-semibold mg-l-5">Hapus</button>
+              <!-- <button type="submit" class="btn btn-its tx-montserrat tx-semibold mg-l-5">Hapus</button> -->
+              <a href="<?php echo base_url();?>admin/jenis_vaksin/delete/" id="link-delete" class="btn btn-its tx-montserrat tx-semibold mg-l-5">Hapus</a>
             </form>
           </div>
         </div>
@@ -158,8 +159,8 @@
         }
     </script>
 
-    <script src="../../lib/select2/js/select2.min.js"></script>
-    <script src="../../lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="<?php echo base_url();?>lib/select2/js/select2.min.js"></script>
+    <script src="<?php echo base_url();?>lib/datatables.net/js/jquery.dataTables.min.js"></script>
 
     <script>
       $(function(){
@@ -187,6 +188,13 @@
         // Select2
         $('.dataTables_length select').select2({ minimumResultsForSearch: Infinity });
 
+      });
+    </script>
+    <script type="text/javascript">
+      $(".btn-delete").click(function(){
+        var id=$(this).data("id");
+        $("#link-delete").attr("href","<?php echo base_url();?>admin/jenis_vaksin/delete?id="+id);
+        console.log(id);
       });
     </script>
 

@@ -59,15 +59,15 @@
                     </div>
                     <div class="col-2 col-sm-2 col-lg-2 d-flex align-items-center justify-content-end">
                       <div class="dropdown dropdown-custom">
-                        <!--button class="btn btn-white tx-montserrat tx-semibold d-none d-lg-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn btn-white tx-montserrat tx-semibold d-none d-lg-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <i data-feather="more-vertical" class="wd-10 mg-r-5"></i>Pilihan
-                        </button -->
+                        </button>
                         <button class="btn btn-white btn-icon d-lg-none" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <i data-feather="more-vertical"></i>
                         </button>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="vaksinasi-edit.html"><i data-feather="edit"></i>Edit</a>
-                          <a class="dropdown-item" href="#hapusvaksinasi" data-toggle="modal" data-animation="effect-scale"><i data-feather="trash"></i>Hapus</a>
+                          <!-- a class="dropdown-item" href="vaksinasi-edit.html"><i data-feather="edit"></i>Edit</a -->
+                          <a class="dropdown-item" href="#hapusvaksinasi" data-toggle="modal" data-animation="effect-scale" data-id="<?php echo $result->id_jadwal ?>"><i data-feather="trash"></i>Hapus</a>
                         </div>
                       </div>
                     </div>
@@ -143,7 +143,8 @@
                   <div class="modal-footer bd-t-0">
                     <form>
                       <a href="#" data-toggle="modal" data-animation="effect-scale" class="btn btn-white tx-montserrat tx-semibold" data-dismiss="modal">Batalkan</a>
-                      <button type="submit" class="btn btn-its tx-montserrat tx-semibold mg-l-5">Hapus</button>
+                      <!-- <button type="submit" class="btn btn-its tx-montserrat tx-semibold mg-l-5">Hapus</button> -->
+                      <a href="<?php echo base_url();?>admin/jadwal_vaksin/delete/" id="link-delete" class="btn btn-its tx-montserrat tx-semibold mg-l-5">Hapus</a>
                     </form>
                   </div>
                 </div>
@@ -208,5 +209,12 @@
         }
     </script>
 
+    <script type="text/javascript">
+      $(".btn-delete").click(function(){
+        var id=$(this).data("id");
+        $("#link-delete").attr("href","<?php echo base_url();?>admin/jadwal_vaksin/delete?id="+id);
+        console.log(id);
+      });
+    </script>
   </body>
 </html>

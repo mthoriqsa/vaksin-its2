@@ -52,4 +52,11 @@ class Jadwal_vaksin extends CI_Controller {
 		$this->db->insert('jadwal', $data);
 		$this->index();
 	}
+
+	public function delete(){
+		$id = $this->input->get('id');
+		$this->db->where('id_jadwal', $id);
+		$this->db->delete('jadwaal');
+		$this->index();
+	}
 }

@@ -144,7 +144,7 @@
                     <form>
                       <a href="#" data-toggle="modal" data-animation="effect-scale" class="btn btn-white tx-montserrat tx-semibold" data-dismiss="modal">Batalkan</a>
                       <!-- <button type="submit" class="btn btn-its tx-montserrat tx-semibold mg-l-5">Hapus</button> -->
-                      <a href="<?php echo base_url();?>admin/jadwal_vaksin/delete/" id="link-delete" class="btn btn-its tx-montserrat tx-semibold mg-l-5">Hapus</a>
+                      <!-- a href="<?php echo base_url();?>admin/jadwal_vaksin/delete/" id="link-delete" class="btn btn-its tx-montserrat tx-semibold mg-l-5">Hapus</a-->
                     </form>
                   </div>
                 </div>

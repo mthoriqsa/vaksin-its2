@@ -9,13 +9,17 @@ class Jadwal_vaksin extends CI_Controller {
 		// print_r($data);
 		// exit();
 		$data = array();
-		foreach ($query as $v) {
-			$data['tanggal'] = $v->tanggal;
-			$data['hari'] = date_format(date_create($v->tanggal), "l");
-			$data['jam_mulai'] = $v->jam_mulai;
-			$data['jam_selesai'] = $v->jam_selesai;
-		}
+		$data['result'] = $query;
+		
 		//print_r($data); exit();
 		$this->load->view('admin/jadwal_vaksin', $data);
+	}
+
+	public function detail(){
+		$data = array();
+		$id = $this->input->get('id');
+
+		$data['result'] = $this->db->where('id_jadwal', $id)->get('jadwal')->row();
+		$this->load->view('admin/vaksin_detail', $data);
 	}
 }

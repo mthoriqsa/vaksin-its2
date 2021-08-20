@@ -92,7 +92,7 @@
                       <?php foreach ($result as $r) { ?>
                       <tr>
                         <td class="td-its align-middle border-bottom">
-                          <a href="<?php echo base_url();?>admin/pegawai/detail?id=<?php $r->id_pegawai ?>">
+                          <a href="<?php echo base_url();?>admin/pegawai/detail?id=<?php echo $r->id_pegawai ?>">
                             <p class="mg-b-0 tx-medium tx-color-its3"><?php echo $r->nama_pegawai ?></p>
                             <p class="mg-b-0 tx-13 tx-color-03"><?php echo $r->nik_pegawai ?></p>
                           </a>

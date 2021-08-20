@@ -16,7 +16,7 @@ class Pegawai extends CI_Controller {
 
 	public function detail(){
 		$data = array();
-		$id = $this->input->post('id_pegawai');
+		$id = $this->input->get('id');
 
 		$data['result'] = $this->db->where('id_pegawai', $id)->get('pegawai')->row();
 		$this->load->view('admin/pegawai_detail', $data);

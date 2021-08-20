@@ -30,7 +30,7 @@
             <div class="d-lg-none mg-t-10">
             </div>
             <div>
-              <a href="<?php echo base_url();?>admin/jadwal_vaksin/add"  class="btn btn-its tx-montserrat tx-semibold"><i data-feather="plus" class="wd-10 mg-r-5 tx-color-its2"></i> Tambah</a>
+              <a href="<?php echo base_url();?>admin/jadwal_vaksin/form_add"  class="btn btn-its tx-montserrat tx-semibold"><i data-feather="plus" class="wd-10 mg-r-5 tx-color-its2"></i> Tambah</a>
             </div>
           </div>
 

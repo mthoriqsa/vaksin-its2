@@ -4,7 +4,6 @@
     <?php $this->load->view('_partials/head.php') ?>
   </head>
   <body>
-
     <aside class="aside aside-fixed">
       <?php $this->load->view('_partials/sidebar.php') ?>
     </aside>
@@ -46,10 +45,13 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td class="td-its align-middle border-bottom">Coronavac</td>
-                        <td class="td-its align-middle border-bottom"><a href="#" class="btn btn-white btn-icon" role="button" data-toggle="modal" data-target="#hapusjenisvaksin" data-animation="effect-scale"><i data-feather="trash" class="wd-10"></i></a></td>
-                      </tr>
+                      <?php foreach ($result as $r) { ?>
+                        <tr>
+                          <td class="td-its align-middle border-bottom"><?php echo $r->nama_vaksin ?></td>
+                          <td class="td-its align-middle border-bottom"><a href="#" class="btn btn-white btn-icon" role="button" data-toggle="modal" data-target="#hapusjenisvaksin" data-animation="effect-scale"><i data-feather="trash" class="wd-10"></i></a></td>
+                        </tr>
+                      <?php } ?>
+                      
                     </tbody>
                   </table>
                 </div>

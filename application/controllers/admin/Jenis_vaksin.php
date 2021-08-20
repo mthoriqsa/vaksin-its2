@@ -9,11 +9,8 @@ class Jenis_vaksin extends CI_Controller {
 		// print_r($data);
 		// exit();
 		$data = array();
-		foreach ($query as $v) {
-			$data['id'] = $v->id_vaksin;
-			$data['nama'] = $v->nama_vaksin;
-		}
+		$data['result'] = $query;
 		//print_r($data); exit();
-		$this->load->view('jenis_vaksin', $data);
+		$this->load->view('admin/jenis_vaksin', $data);
 	}
 }

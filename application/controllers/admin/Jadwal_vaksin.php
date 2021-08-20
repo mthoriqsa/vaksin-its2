@@ -16,6 +16,6 @@ class Jadwal_vaksin extends CI_Controller {
 			$data['jam_selesai'] = $v->jam_selesai;
 		}
 		//print_r($data); exit();
-		$this->load->view('jadwal_vaksin', $data);
+		$this->load->view('admin/jadwal_vaksin', $data);
 	}
 }

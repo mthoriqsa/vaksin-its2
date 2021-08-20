@@ -5,4 +5,6 @@
 <script src="<?php echo base_url();?>lib/js-cookie/js.cookie.js"></script>
 <script src="<?php echo base_url();?>js/dashforge.js"></script>
 <script src="<?php echo base_url();?>js/dashforge.aside.js"></script>
+<script src="<?php echo base_url();?>lib/select2/js/select2.min.js"></script>
+<script src="<?php echo base_url();?>lib/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>

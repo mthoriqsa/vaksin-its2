@@ -17,7 +17,7 @@
                     <li class="nav-item"><a href="<?php echo base_url();?>beranda" class="nav-link"><i data-feather="home"></i> <span>Beranda</span></a></li>
                     <li class="nav-label mg-t-15">Pegawai</li>
                     <li class="nav-item"><a href="<?php echo base_url();?>pegawai/riwayat" class="nav-link"><i data-feather="clock"></i> <span>Riwayat</span></a></li>
-                    <li class="nav-item"><a href="<?php echo base_url();?>pegawai/vaksinasi" class="nav-link"><i data-feather="calendar"></i> <span>Jadwal vaksinasi</span></a></li>
+                    <li class="nav-item"><a href="<?php echo base_url();?>pegawai/jadwal" class="nav-link"><i data-feather="calendar"></i> <span>Jadwal vaksinasi</span></a></li>
                 </ul>
             </div>
     </aside>

@@ -6,11 +6,11 @@
   <body>
 
     <aside class="aside aside-fixed">
-      <?php $this->load->view('_partials/sidebar.php') ?>
+      <?php $this->load->view('_partials/sidebar_p.php') ?>
     </aside>
 
     <div class="content ht-100v pd-0" style="position: relative">
-      <?php $this->load->view('_partials/navbar.php') ?>
+      <?php $this->load->view('_partials/navbar_p.php') ?>
 
       <div class="content-body ht-100p pd-t-80">
         <div class="container pd-x-0" id="content">
@@ -29,9 +29,6 @@
             </div>
             <div class="d-lg-none mg-t-10">
             </div>
-            <div>
-              <a href="<?php echo base_url();?>admin/jadwal_vaksin/add"  class="btn btn-its tx-montserrat tx-semibold"><i data-feather="plus" class="wd-10 mg-r-5 tx-color-its2"></i> Tambah</a>
-            </div>
           </div>
 
           <div class="row row-xs">
@@ -40,7 +37,7 @@
                 <div class="card-body card-list">
                   <?php foreach ($result as $r) { ?>
                     <div class="card-list-item">
-                      <a href="<?php echo base_url();?>admin/jadwal_vaksin/detail?id=<?php echo $r->id_jadwal ?>">
+                      <a href="<?php echo base_url();?>pegawai/jadwal/detail?id=<?php echo $r->id_jadwal ?>">
                         <div class="d-flex justify-content-between align-items-center sc-link">
                           <div class="media">
                             <div class="wd-40 ht-40 bg-its-icon tx-color-its mg-r-15 mg-md-r-15 d-flex align-items-center justify-content-center rounded-its"><i data-feather="calendar"></i></div>
